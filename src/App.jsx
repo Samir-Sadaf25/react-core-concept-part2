@@ -6,6 +6,7 @@ import Friends from './friends'
 import './App.css'
 import { Suspense } from 'react'
 import Post from './post'
+import Players from './players'
 const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
 .then(res => res.json())
 
@@ -27,6 +28,7 @@ function App() {
     <>
 
       <h3>Vite + React</h3>
+      <Players></Players>
       <Suspense fallback={<h3>post are coming...</h3>}>
           <Post postPromise={postPromise}></Post>        
       </Suspense>
